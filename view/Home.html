@@ -1,0 +1,26 @@
+		<!--
+<div >
+	<div>{{title}}</div>
+	<div>
+		
+		<input ng-model="search"/>
+	</div>
+<li ng-repeat="emp in employees | filter:search | orderBy:'firstname'">
+		<a href="#/view/{{emp.emp_id}}">{{emp.firstname}} {{emp.lastname}} - {{emp.extension}}</a>
+		<div class='department' ng-show='emp.emp_id == selectedEmpId'>
+			{{emp.dept_id.dept_name}}
+		</div>
+	</li>
+</div> -->
+
+<div ng-controller="HomeController">
+	<h4>{{title}}</h4>
+	<div class="control-group" >
+		<div class="controls">
+			<div class="input-prepend">
+	      		<span class="add-on"><i class="icon-search"></i></span>
+	      		<input id="searchfield" type="text" class="span3" placeholder="Start typing" style="margin: 0 auto;" data-provide="typeahead" data-items="5" >
+	    	</div>		
+		</div>
+	</div>
+</div>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<column>
+	<column>property</column>
+	<dataType>varchar</dataType>
+	<displayLength>true</displayLength>
+	<displayName>Property</displayName>
+	<foreignKey>N/A</foreignKey>
+	<foreignKeyTable>N/A</foreignKeyTable>
+	<includeInEntity>true</includeInEntity>
+	<isComputed>no</isComputed>
+	<isForeignKey>NO</isForeignKey>
+	<isIdentity>false</isIdentity>
+	<isMemeberOfCompositeForeignKey>false</isMemeberOfCompositeForeignKey>
+	<isPrimaryKey>True</isPrimaryKey>
+	<length>64</length>
+	<name>property</name>
+	<ormType>string</ormType>
+	<TestType>string</TestType>
+	<Type>string</Type>
+	<uiType>string</uiType>
+</column>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<table>
+	<createInterface>TRUE</createInterface>
+	<displayName>Supervisor</displayName>
+	<displayPlural>Supervisors</displayPlural>
+	<entityName>supervisor</entityName>
+	<ForeignKeyLabel>sup_id</ForeignKeyLabel>
+	<hasForeignKeys>FALSE</hasForeignKeys>
+	<hasJoinTable>FALSE</hasJoinTable>
+	<identity>sup_id</identity>
+	<isAutoIncrementing>true</isAutoIncrementing>
+	<isJoinTable>FALSE</isJoinTable>
+	<isReferencedAsForeignKey>false</isReferencedAsForeignKey>
+	<isView>false</isView>
+	<name>Supervisor</name>
+	<orderby>sup_id asc</orderby>
+	<plural>supervisors</plural>
+	<prefix></prefix>
+	<rowcount>0</rowcount>
+	<schema>dbo</schema>
+	<softDelete>FALSE</softDelete>
+</table>

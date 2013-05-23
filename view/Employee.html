@@ -1,0 +1,37 @@
+<h4>{{title}}</h4>
+<form class="form" style="padding:5px;margin:5px">
+    <div class="control-group">
+        <label class="control-label" for="inputFirstName">
+            First Name
+        </label>
+        <input type="text" id="inputFirstName" placeholder="First Name" ng-model="employee.firstname">
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="inputLastName">
+            Last Name
+        </label>
+        <input type="text" id="inputLastName" placeholder="Last Name" ng-model="employee.lastname">
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="inputExtension">
+            Extension
+        </label>
+        <input type="text" id="inputExtension" placeholder="Extension" ng-model="employee.extension">
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="selectDept">
+            Department
+        </label>
+        <select id="inputSelectDept" ng-model="employee.dept_id">
+            <option ng-repeat="dept in deptarments" ng-value="employee.dept_id">{{dept.dept_name}}</option>
+        </select>
+    </div>
+    <div class="form">
+        <button type="submit" class="btn btn-primary" ng-click="addNew()">
+            Save changes
+        </button>
+        <button type="button" class="btn">
+            Cancel
+        </button>
+    </div>
+</form>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<column>
+	<column>dept_id</column>
+	<dataType>int</dataType>
+	<displayLength>true</displayLength>
+	<displayName>Dept_id</displayName>
+	<foreignKey>dept_id</foreignKey>
+	<foreignKeyTable>departments</foreignKeyTable>
+	<includeInEntity>true</includeInEntity>
+	<isComputed>no</isComputed>
+	<isForeignKey>true</isForeignKey>
+	<isIdentity>false</isIdentity>
+	<isMemeberOfCompositeForeignKey>false</isMemeberOfCompositeForeignKey>
+	<isPrimaryKey>NO</isPrimaryKey>
+	<length>10</length>
+	<name>dept_id</name>
+	<ormType>integer</ormType>
+	<TestType>numeric</TestType>
+	<Type>numeric</Type>
+	<uiType>string</uiType>
+</column>

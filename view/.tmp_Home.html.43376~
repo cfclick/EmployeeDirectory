@@ -1,0 +1,20 @@
+	
+<div ng-controller="homeCtrl">
+	<div>{{title}}</div>
+	<div>
+		<input ng-model="search"/>
+	</div>
+	<!--<li ng-repeat="emp in employees | filter:search | orderBy:'firstname'">
+		{{emp.firstname}} {{emp.lastname}} - {{emp.extension}} - {{emp.dept_id.dept_name}}
+	</li>-->
+
+
+        <div class="span9 columns">
+          <h2>Example</h2>
+          <p>Start typing in the field below to show the typeahead results.</p>
+          <div class="well">
+            <input type="text" class="span3" style="margin: 0 auto;" data-provide="typeahead" data-items="4" data-source='{{employees}}'>
+          </div>
+		  </div>
+		  
+	</div> 

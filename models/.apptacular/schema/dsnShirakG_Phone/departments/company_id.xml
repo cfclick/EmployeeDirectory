@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<column>
+	<column>company_id</column>
+	<dataType>int</dataType>
+	<displayLength>true</displayLength>
+	<displayName>Company_id</displayName>
+	<foreignKey>company_id</foreignKey>
+	<foreignKeyTable>companies</foreignKeyTable>
+	<includeInEntity>true</includeInEntity>
+	<isComputed>no</isComputed>
+	<isForeignKey>true</isForeignKey>
+	<isIdentity>false</isIdentity>
+	<isMemeberOfCompositeForeignKey>false</isMemeberOfCompositeForeignKey>
+	<isPrimaryKey>NO</isPrimaryKey>
+	<length>10</length>
+	<name>company_id</name>
+	<ormType>integer</ormType>
+	<TestType>numeric</TestType>
+	<Type>numeric</Type>
+	<uiType>string</uiType>
+</column>
