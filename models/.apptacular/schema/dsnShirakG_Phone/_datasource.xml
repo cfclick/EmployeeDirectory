@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<datasource>
-	<displayName>dsnShirakG_Phone</displayName>
-	<name>dsnShirakG_Phone</name>
-	<prefix></prefix>
-	<version>Microsoft SQL Server 2008 - 10.0.2531</version>
-</datasource>

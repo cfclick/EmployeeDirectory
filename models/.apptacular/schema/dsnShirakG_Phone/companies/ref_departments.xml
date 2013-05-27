@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<reference>
-	<foreignKey>company_id</foreignKey>
-	<foreignKeyTable>departments</foreignKeyTable>
-	<includeInEntity>true</includeInEntity>
-	<isJoinTable>false</isJoinTable>
-	<otherTable></otherTable>
-</reference>
