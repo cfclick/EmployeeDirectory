@@ -2,7 +2,7 @@
 <html ng-app="EmployeeDirectory">
 	<head>
 		<title>CNI Employee Directory</title>
-		<meta http-equiv="x-ua-compatible" content="IE=9,IE=8">
+		<meta http-equiv="x-ua-compatible" content="IE=9">
 		<!--- lib --->
 		<script src="libs/angular.min.js" type="application/javascript"></script>
 		<!---End Lib --->
@@ -18,15 +18,20 @@
 		<script src="models/js/serviceFactory.js"></script>
 		<!--- end models --->
 
+		<!--- directives --->
+		<script src="view/js/directives/igTypeahead.js"></script>
+		<!--- end directives --->
+
 		<!---Style sheet--->
 		<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="assets/employeeDirectory.css" />
 		<!--- end stylesheet --->
 	</head>
-	<body >
+	<body ng-controller='mainCtrl' >
 		<div style="margin:5px">
-			<div ng-controller="HomeController" class="btn-group">
+			<div class="btn-group">
 
-			  <a href="#/" class="btn"  ><i class="icon-home"></i>CNI Employee Directory</button>
+			  <a href="#/" class="btn"  ><i class="icon-home"></i> CNI Employee Directory</button>
 			  <a href="#/addEditEmp/0" class="btn" ><i class="icon-plus"></i></a>
 			  <a class="btn" ng-click="fetchData()"><i class="icon-refresh"></i></a>
 			</div>
@@ -38,6 +43,7 @@
 <cfajaxproxy cfc="models.services.employeesService" jsclassname="EmployeeServiceProxy" >
 <cfajaxproxy cfc="models.services.departmentsService" jsclassname="DepartmentServiceProxy" >
 
+<!---<script src="assets/angular-strap.min.js"></script>--->
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 <script src="assets/bootstrap/js/jquery.js"></script>
 <!--- <script src="assets/bootstrap/js/google-code-prettify/prettify.js"></script>--->

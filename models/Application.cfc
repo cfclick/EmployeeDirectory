@@ -1,8 +1,8 @@
 component{
 
-	This.name = "dsnShirakG_Phone";
+	This.name = "EmployeeDirectory";
 	This.ormenabled = true;
-	This.datasource = "dsnShirakG_Phone";
+	This.datasource = "dsnEmployeeDirectory";
 	This.customTagPaths = GetDirectoryFromPath(GetCurrentTemplatePath()) & "customtags";
 	This.ormsettings.eventHandler = "EmployeeDirectory.models.cfc.eventHandler";
 	This.ormsettings.dbcreate = "update";

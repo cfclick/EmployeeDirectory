@@ -1,26 +1,35 @@
-		<!--
-<div >
-	<div>{{title}}</div>
-	<div>
-		
-		<input ng-model="search"/>
-	</div>
-<li ng-repeat="emp in employees | filter:search | orderBy:'firstname'">
-		<a href="#/view/{{emp.emp_id}}">{{emp.firstname}} {{emp.lastname}} - {{emp.extension}}</a>
-		<div class='department' ng-show='emp.emp_id == selectedEmpId'>
-			{{emp.dept_id.dept_name}}
-		</div>
-	</li>
-</div> -->
 
-<div ng-controller="HomeController">
-	<h4>{{title}}</h4>
-	<div class="control-group" >
-		<div class="controls">
-			<div class="input-prepend">
-	      		<span class="add-on"><i class="icon-search"></i></span>
-	      		<input id="searchfield" type="text" class="span3" placeholder="Start typing" style="margin: 0 auto;" data-provide="typeahead" data-items="5" >
-	    	</div>		
-		</div>
-	</div>
+<div>
+    <h4>{{title}}</h4>
+    <div class="control-group">
+        <div class="controls">
+            <div class="input-prepend">
+                <span class="add-on"><i class="icon-search"></i></span>
+                <!--<input id="searchfield" type="text" class="span3"
+                placeholder="Start typing" style="margin: 0 auto;"
+                data-provide="typeahead" data-items="5" ng-model="showEmpDetails"
+                >-->
+                <typeahead id="searchfield" choice="selection" list="employees" placeholder="Start typing" style="margin: 0 auto;">
+                </typeahead> 
+            </div>
+        </div>
+    </div>
+    <div class="slidingDiv" id="detailDiv" ng-show="selection.emp_id > 0" ng-model="emp">
+        <div class="control-group">
+            <div class="controls">
+                <div class="input-prepend">
+                     <label class="control-label" id="firstName">First Name: <a href="#/addEditEmp/{{selection.emp_id}}">{{selection.firstname}}</a></label>
+                </div>
+				<div class="input-prepend">
+                     <label class="control-label" id="lastName">Last Name: {{selection.lastname}}</label>
+                </div>
+				<div class="input-prepend">
+                     <label class="control-label" id="phone">Phone - ext: {{selection.phone1}} - {{selection.extension}}</label>
+                </div>
+				<div class="input-prepend">
+                     <label class="control-label" id="department">Department: <a href="#/department" >{{selection.dept_id.dept_name}}</a></label>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

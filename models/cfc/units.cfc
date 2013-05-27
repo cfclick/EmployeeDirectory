@@ -1,5 +1,5 @@
 /* NOTE: Any changes you make to this CFC will be written over if you regenerate the application.*/
-component persistent="true" schema="dbo"{
+component persistent="true" schema="EmployeeDirectory"{
 
 	property name="unit_id" ormtype="integer" type="numeric" fieldtype="id" generator="assigned";
 	property name="dept_id" ormtype="integer" type="numeric" fieldtype="id" generator="assigned";

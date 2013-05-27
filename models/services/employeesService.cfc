@@ -35,14 +35,24 @@ component{
 	remote array function listAsArray() {
 
 		var emp = entityLoad("employees", {}, "firstname asc");
-
+		var str = {};
+		var ar = [];
 		for( var i = 1; i <= arraylen(emp); i++ ){
-			ar[i]= emp[i].getfirstname() & ' ' & emp[i].getlastname() & ' (' & emp[i].getextension() & ')';
+		/*str['id'] = emp[i].getemp_id();
+			str['fullname']= emp[i].getfirstname() & ' ' & emp[i].getlastname() & ' (' & emp[i].getextension() & ')';
+			str['firstname']= emp[i].getfirstname();
+			str['lastname']= emp[i].getlastname();
+			str['extension']= emp[i].getextension();
+			str['dept_id']= emp[i].getdept_id();
+			//str['dept_name']= emp[i].getdept_id();*/
+			str = emp[i];
+			str['fullname']= emp[i].getfirstname() & ' ' & emp[i].getlastname() & ' (' & emp[i].getextension() & ')';
+			ar[i] = serializeJSON(str);
+			//ar[i]= emp[i].getfirstname() & ' ' & emp[i].getlastname() & ' (' & emp[i].getextension() & ')';
 		}
 
 		return ar;
 	}
-
 	/**
 	* @hint Returns all of the records in employees, with paging.
 	*/
@@ -68,17 +78,19 @@ component{
 	* @hint Updates one record from employees.
 	*/
 	remote void function update(required any employees ) {
-
-		var employee = new EmployeeDirectory.models.cfc.employees();
-		employee.nullifyZeroID();
-		if(isJSON(arguments.employees))
+		local.employees = arguments.employees;
+		if(isJSON(local.employees))
 		{
-			var emp = deserializeJSON( arguments.employees);
+			var employee = new EmployeeDirectory.models.cfc.employees();
+			var emp = deserializeJSON( local.employees);
 
-			employee..populate(emp);
+			employee.populate(emp);
+			EntitySave( employee );
+		}else{
+			local.employees.nullifyZeroID();
+			EntitySave(local.employees);
 		}
 
-		EntitySave(employee);
 	}
 
 	/**
