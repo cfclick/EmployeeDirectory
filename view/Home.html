@@ -14,20 +14,20 @@
             </div>
         </div>
     </div>
-    <div class="slidingDiv" id="detailDiv" ng-show="selection.emp_id > 0" ng-model="emp">
+    <div class="slidingDiv" id="detailDiv" ng-show="selection.Id > 0" ng-model="emp">
         <div class="control-group">
             <div class="controls">
                 <div class="input-prepend">
-                     <label class="control-label" id="firstName">First Name: <a href="#/addEditEmp/{{selection.emp_id}}">{{selection.firstname}}</a></label>
+                     <label class="control-label" id="firstName">First Name: <a href="#/addEditEmp/{{selection.Id}}">{{selection.firstName}}</a></label>
                 </div>
 				<div class="input-prepend">
-                     <label class="control-label" id="lastName">Last Name: {{selection.lastname}}</label>
+                     <label class="control-label" id="lastName">Last Name: {{selection.lastName}}</label>
                 </div>
 				<div class="input-prepend">
-                     <label class="control-label" id="phone">Phone - ext: {{selection.phone1}} - {{selection.extension}}</label>
+                     <label class="control-label" id="phone">Ext: {{selection.extension}}</label>
                 </div>
 				<div class="input-prepend">
-                     <label class="control-label" id="department">Department: <a href="#/department" >{{selection.dept_id.dept_name}}</a></label>
+                     <label class="control-label" id="department">Department: <a href="#/department" >{{selection.Department.name}}</a></label>
                 </div>
             </div>
         </div>

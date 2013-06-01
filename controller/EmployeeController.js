@@ -1,15 +1,16 @@
 /**
  * @author shirakg
  */
-EmployeeDirectory.controller('EmployeeController', function($scope, $routeParams, EmployeeModel, DepartmentModel){
+EmployeeDirectory.controller('EmployeeController', function($scope, $routeParams, EmployeeModel){
 
-    $scope.deptarments = DepartmentModel.list();
-    if ($routeParams.emp_id == 0) 
+    $scope.deptarments = EmployeeModel.getAllDepartments();
+	
+    if ($routeParams.Id == 0) 
         $scope.title = "Add new Employee";
     else 
-        if ($routeParams.emp_id > 0) {
+        if ($routeParams.Id > 0) {
             $scope.title = "Edit Employee";
-            $scope.employee = EmployeeModel.get($routeParams.emp_id);          
+            $scope.employee = EmployeeModel.get($routeParams.Id);          
             for (var i = 0; i < $scope.deptarments.length; i++) {
                 if ($scope.deptarments[i].dept_id == $scope.employee.dept_id.dept_id) {
                     $scope.dept = $scope.deptarments[i];

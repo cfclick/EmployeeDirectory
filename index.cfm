@@ -15,7 +15,7 @@
 		<!--- end controllers --->
 
 		<!--- models --->
-		<script src="models/js/serviceFactory.js"></script>
+		<script src="model/js/serviceFactory.js"></script>
 		<!--- end models --->
 
 		<!--- directives --->
@@ -40,8 +40,8 @@
 		</div>
 	</body>
 </html>
-<cfajaxproxy cfc="models.services.employeesService" jsclassname="EmployeeServiceProxy" >
-<cfajaxproxy cfc="models.services.departmentsService" jsclassname="DepartmentServiceProxy" >
+<cfajaxproxy cfc="model.services.EmployeeService" jsclassname="EmployeeServiceProxy" >
+<!---<cfajaxproxy cfc="models.services.departmentsService" jsclassname="DepartmentServiceProxy" >--->
 
 <!---<script src="assets/angular-strap.min.js"></script>--->
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
