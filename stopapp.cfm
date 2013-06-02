@@ -1,0 +1,3 @@
+﻿<cfscript>
+	applicationStop();	
+</cfscript>

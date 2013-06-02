@@ -41,12 +41,28 @@
 	</body>
 </html>
 <cfajaxproxy cfc="model.services.EmployeeService" jsclassname="EmployeeServiceProxy" >
-<!---<cfajaxproxy cfc="models.services.departmentsService" jsclassname="DepartmentServiceProxy" >--->
+<script>
+	var onSocketOpen = function(msg){
+		alert(JSON.stringify(msg));
+	};
+	
+	var onMessageHandler = function(messageobj){
+		alert(JSON.stringify(messageobj));
+		};
+	
+	var onErrorHandler = function(err){
+		alert(JSON.stringify(err));
+	};
+</script>
 
-<!---<script src="assets/angular-strap.min.js"></script>--->
+<cfwebsocket name="EmployeeDirectoy_Socket" 
+			 subscribeto="EmpDirChannel" 
+			 onmessage="onMessageHandler" 
+			 onerror="onErrorHandler" 
+			 onopen="onSocketOpen">
+
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 <script src="assets/bootstrap/js/jquery.js"></script>
-<!--- <script src="assets/bootstrap/js/google-code-prettify/prettify.js"></script>--->
 <script src="assets/bootstrap/js/bootstrap-transition.js"></script>
 <script src="assets/bootstrap/js/bootstrap-alert.js"></script>
 <script src="assets/bootstrap/js/bootstrap-modal.js"></script>

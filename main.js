@@ -12,14 +12,30 @@ var employeeDirectoryConfig = function ($routeProvider) {
 
 var EmployeeDirectory = angular.module("EmployeeDirectory",[]).config( employeeDirectoryConfig );
 
- function mainCtrl($scope,$window,$location){
-	//alert('hello');
+function mainCtrl($scope,$window,$location){
 	
 	$scope.fetchData = function(){
-		//alert('fetch data');
-		$window.localStorage.removeItem('emplist');
-		
+		$window.localStorage.removeItem('emplist');		
 		$location.url('#/');
-		//alert('hi home');
 	};
+	
+	/*
+$scope.onMessageHandler = function(msg){
+		alert(JSON.stringify(msg));
+	};
+*/
+	
+	/*
+$scope.onErrorHandler = function(err){
+		alert(JSON.stringify(err));
+	};
+*/
+	
+	/*
+$scope.onSocketOpen = function(msg){
+		alert(JSON.stringify(msg));
+	};
+*/
 }
+
+

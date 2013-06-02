@@ -5,7 +5,7 @@ EmployeeDirectory.controller('HomeController', function($scope,$routeParams,$win
 	$scope.title = "Search";
 	
 	$scope.employees = JSON.parse($window.localStorage.getItem('emplist'));
-	alert($scope.employees);
+	//alert($scope.employees);
 	if(!$scope.employees){
 		alert('no local');
 		$scope.employees = EmployeeModel.getAllEmployees();
